@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+  --color-navy: #14243A;
+  --color-navy-dark: #0B1728;
+  --color-navy-light: #1F3554;
+  --color-navy-border: #223956;
+  --color-royal: #356AE6;
+  --color-royal-hover: #2557CE;
+  --color-royal-light: #EDF2FD;
+  --color-teal: #16A6A1;
+  --color-teal-light: #E8F8F7;
+  --color-teal-dark: #0E7672;
+  --color-ivory: #F7F8FA;
+  --color-surface: #FFFFFF;
+  --color-border-subtle: #E2E8F0;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "cv05" 1;
+  }
+}
+
+/* Custom scrollbar for data tables and logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Material symbols outlined helper */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
