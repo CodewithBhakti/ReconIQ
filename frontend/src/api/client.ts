@@ -1,4 +1,9 @@
-export const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const rawApiUrl =
+  import.meta.env.VITE_API_URL ||
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.PROD ? 'https://reconiq-xwl0.onrender.com' : 'http://localhost:8000');
+
+export const API_BASE = rawApiUrl.replace(/\/+$/, '');
 
 export interface ReconciliationSummary {
   run_id: string;
